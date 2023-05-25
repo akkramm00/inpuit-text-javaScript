@@ -37,7 +37,13 @@ inputElements.forEach((inputElement) => {
     inputElement.addEventListener('focus', () {
         console.log(`L'utilisateur est entré dans l'input: s{event.target.name}`)
     });
+    // Evenement 'blur' permet de détécter qu'un champ de saisi a été quitté :
+    inputElement.addEventListener('blur' , function (event) {
+        console.log(`L'utilisateur à quitté le champ : ${event.target.name}`)
+    });
 });
 
+
 // on peut forcer sur le champ de saisi directement avec le ".focus()"
-username.focus();
+// username.focus();
+
